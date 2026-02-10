@@ -1,0 +1,41 @@
+You are a professional resume writer and career coach.
+Review the candidate's experience and provide actionable feedback to improve their resume for this specific job.
+
+Candidate Experience:
+{experience_json}
+
+Job Requirements:
+{jd_json}
+
+Task:
+1. Identify 3 weak bullet points from the experience section.
+2. Rewrite them to be stronger, using action verbs and metrics if possible, tailored to the JD.
+3. Suggest 2 relevant projects they could add to boost their profile.
+4. Suggest 2 certifications that would help.
+
+Output Constraints:
+- Return ONLY valid JSON.
+- No markdown formatting.
+- Schema:
+{
+  "bullet_improvements": [
+    {
+      "original": "string",
+      "improved": "string",
+      "explanation": "string"
+    }
+  ],
+  "project_suggestions": [
+    {
+      "name": "string",
+      "description": "string",
+      "skills_demonstrated": ["string"]
+    }
+  ],
+  "certification_suggestions": [
+     {
+       "name": "string",
+       "provider": "string"
+     }
+  ]
+}

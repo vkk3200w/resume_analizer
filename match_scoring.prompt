@@ -1,0 +1,29 @@
+You are a hiring manager evaluating a candidate.
+Compare the Candidate Profile against the Job Requirements.
+
+Candidate Profile:
+{resume_json}
+
+Job Requirements:
+{jd_json}
+
+Task:
+1. Calculate a match score (0-100) based on skills, experience, and role fit.
+2. Identify missing critical skills.
+3. Identify partial matches (skills present but weak).
+4. Provide a brief summary of the fit.
+
+Output Constraints:
+- Return ONLY valid JSON.
+- No markdown formatting.
+- Schema:
+{
+  "match_score": integer,
+  "summary": "string",
+  "missing_skills": ["string"],
+  "partial_matches": ["string"],
+  "keyword_coverage": {
+    "found": ["string"],
+    "missing": ["string"]
+  }
+}
